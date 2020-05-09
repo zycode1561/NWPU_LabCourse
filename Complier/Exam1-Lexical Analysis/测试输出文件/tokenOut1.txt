@@ -1,4 +1,4 @@
-read file :test7.txtclass -> class
+read file :test1.txtclass -> class
 identifier -> WhatHappen
 assign -> {public -> public
 static -> static
@@ -15,8 +15,7 @@ assign -> =new -> new
 identifier -> MyClient
 assign -> (assign -> )assign -> ;while -> while
 assign -> (assign -> !false -> false
-error type : unknown symbol
-error: an error in line : 7identifier -> handle
+assign -> )assign -> {identifier -> handle
 assign -> =identifier -> mc
 assign -> .identifier -> start
 assign -> (Digit -> 10assign -> ,Digit -> 10assign -> )assign -> ;assign -> }assign -> }assign -> }class -> class
@@ -32,8 +31,8 @@ identifier -> index
 assign -> ;public -> public
 boolean -> boolean
 identifier -> init
-assign -> (assign -> )assign -> {identifier -> index
-assign -> =Digit -> 0assign -> ;identifier -> messagelist
+assign -> (assign -> )assign -> {error type : unknown symbol
+error: an error in line : 19error type : there must be at least one letter or digit behind underlineerror: an error in line : 20identifier -> messagelist
 assign -> =new -> new
 int -> int
 assign -> [Digit -> 10assign -> ]assign -> ;identifier -> in
@@ -88,7 +87,7 @@ assign -> ;if -> if
 assign -> (identifier -> messagelist
 assign -> .length -> length
 error type : unknown symbol
-error: an error in line : 52identifier -> flag
+error: an error in line : 53identifier -> flag
 assign -> =false -> false
 assign -> ;assign -> }else -> else
 assign -> {identifier -> flag
@@ -112,9 +111,8 @@ assign -> =Digit -> 3assign -> ;identifier -> tmp3
 assign -> =Digit -> 4assign -> ;while -> while
 assign -> (assign -> (identifier -> tmp2
 assign -> <identifier -> tmp3
-assign -> )assign -> &&identifier -> tmp1
-assign -> <identifier -> tmp2
-assign -> )assign -> )assign -> {identifier -> tmp1
+assign -> )error type : unknown symbol
+error: an error in line : 70identifier -> tmp1
 assign -> =identifier -> tmp3
 assign -> -identifier -> tmp2
 assign -> ;identifier -> tmp2
@@ -139,10 +137,7 @@ assign -> (assign -> )assign -> {identifier -> in
 assign -> =identifier -> in
 assign -> +Digit -> 1assign -> ;identifier -> out
 assign -> =identifier -> out
-assign -> -Digit -> 1assign -> ;identifier -> System
-assign -> .identifier -> out
-assign -> .identifier -> println
-assign -> (false -> false
+assign -> -Digit -> 1assign -> ;System.out.println -> System.out.printlnassign -> (false -> false
 assign -> )assign -> ;assign -> }assign -> }class -> class
 identifier -> MyClient
 identifier -> extend

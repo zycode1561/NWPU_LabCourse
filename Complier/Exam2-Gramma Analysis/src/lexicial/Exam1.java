@@ -1,4 +1,6 @@
-package exam1;
+package lexicial;
+
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -91,15 +93,15 @@ public class Exam1 {
         System.out.println("Please input the filename:");
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String input = "";
-        FileWriter writer = new FileWriter("./output.txt");
+        FileWriter writer = new FileWriter("./tokenOut.txt");
         FileWriter errorWriter = new FileWriter("./error.txt");
         //获取输入文件名称
         input = bf.readLine();
         File file = new File(input);
         FileReader filereader = new FileReader(file);
         StringBuffer buffer = new StringBuffer();
-        // 向output.txt写，换行根据系统不同修改CRLF即可
-        writer.write("read file :" + input + CRLF);
+        // 向tokenOut.txt写，换行根据系统不同修改CRLF即可
+//        writer.write("read file :" + input + CRLF);
         BufferedReader reader = new BufferedReader(filereader);
 
         //行号
@@ -158,7 +160,7 @@ public class Exam1 {
                                         errorWriter.write("error type : unknown symbol\r\n");
                                         state = -1;
                                     }
-                                    i++;
+//                                    i++;
                                 }else if(isDigit(charArr[i])){
                                     //state num
                                     System.out.print("1 ->");
@@ -275,12 +277,12 @@ public class Exam1 {
                                     for (String s : keyword) {
                                         if (s.equals(word)) {
                                             isKeyWord = true;
-                                            writer.write(s+" -> " + buffer + "\r\n");
+                                            writer.write(s+" -> " + buffer + CRLF);
                                             break;
                                         }
                                     }
                                     if (!isKeyWord) {
-                                        writer.write("identifier -> " + buffer + "\r\n");
+                                        writer.write("identifier -> " + buffer + CRLF);
                                     }
                                     buffer = new StringBuffer();
                                     System.out.println(4);
@@ -326,6 +328,7 @@ public class Exam1 {
                 }
             }
         }
+        writer.write("EOF -> EOF" + CRLF);
         writer.close();
         errorWriter.close();
         filereader.close();

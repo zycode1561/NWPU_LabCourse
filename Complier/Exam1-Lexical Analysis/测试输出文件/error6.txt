@@ -1,0 +1,2 @@
+error type : unknown symbol
+       ^ at line : 52

@@ -1,0 +1,4 @@
+error type : unknown symbol
+       ^ at line : 19error type : there must be at least one letter or digit behind underline       ^ at line : 20error type : unknown symbol
+       ^ at line : 53error type : unknown symbol
+       ^ at line : 70
